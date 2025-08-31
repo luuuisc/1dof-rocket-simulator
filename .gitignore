@@ -1,0 +1,71 @@
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.pyd
+*.pyo
+*.egg-info/
+.eggs/
+dist/
+build/
+pip-wheel-metadata/
+.wheelhouse/
+
+# Virtual environments & env files
+.venv/
+venv/
+env/
+ENV/
+env.bak/
+*.env
+*.env.*
+.envrc
+.env.local
+
+# ---- OS / Editors ----
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.code-workspace
+
+# ---- Logs ----
+logs/
+*.log
+
+# ---- Testing / Coverage ----
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+nosetests.xml
+coverage.xml
+junit*.xml
+
+# ---- Type checkers / linters ----
+.mypy_cache/
+.dmypy.json
+.pyre/
+.pytype/
+pylint-report.txt
+
+# ---- Streamlit ----
+.streamlit/secrets.toml
+
+# ---- Project outputs ----
+# Keep the folder but ignore generated images & metrics
+plots/*
+!plots/.gitkeep
+
+# ---- Data ----
+# Ignore runtime uploads & large data files by default
+data/uploaded_motor_curve.csv
+data/*.csv
+# But keep the example & PDF template CSVs under version control
+!data/motor_curve.csv
+!data/motor_curve_FROM_PDF.csv
+
+# ---- Notebooks ----
+.ipynb_checkpoints/
