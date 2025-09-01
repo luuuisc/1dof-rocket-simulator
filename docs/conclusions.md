@@ -15,11 +15,13 @@ Este documento resume los hallazgos de la simulación vertical 1-DoF del cohete,
 - Velocidad de eyección: `u_e = 960 m/s`
 
 Área de referencia (frontal) calculada desde el diámetro:
+
 $$
-A = \pi\left(\frac{D}{2}\right)^2 = \pi(0.043)^2 \approx 5.8088\times 10^{-3}\ \text{m}^2
+A = \pi\left(\frac{D}{2}\right)^2 = \pi(0.043)^2 \approx 5.8088\times 10^{-3}\ \mathrm{m}^2
 $$
 
 Empuje a partir de la curva de flujo másico:
+
 $$
 T(t) = \dot m(t)\,u_e
 $$
@@ -60,20 +62,20 @@ Tiempos característicos:
 
 ## 🔍 Consistencia y validación
 
-- **Cierre de masa:** el consumo integra ~\(0.625\ \text{kg}\), como se especifica.  
+- **Cierre de masa:** el consumo integra ~\(0.625\ \mathrm{kg}\), como se especifica.  
 - **Eventos detectados con interpolación:**  
-  **MECO** (cruce \(m\downarrow m_{\text{seca}}\) o fin de curva), **apogeo** (cruce \(V=0\)), **aterrizaje** (cruce \(h=0\)).  
+  **MECO** (cruce \(m \downarrow m_{\mathrm{seca}}\) o fin de curva), **apogeo** (cruce \(V=0\)), **aterrizaje** (cruce \(h=0\)).  
 - **Sanidad física:** \(a \to -g\) cerca del apogeo; masa nunca negativa; empuje nulo tras MECO.
 
-> Recomendación: repetir con \(\Delta t/2\) para verificar que las trazas \(h(t)\) y \(V(t)\) cambian < 1%.
+> Recomendación: repetir con \(\Delta t/2\) para verificar que las trazas \(h(t)\) y \(V(t)\) cambian < 1\%.
 
 ---
 
 ## 🛠️ Implicaciones de diseño
 
-- **Aerodinámica:** con \(C_D=0.75\) y \(A\approx 5.81\times10^{-3}\ \text{m}^2\), el arrastre reduce el apogeo; **menor \(C_D\)** o **menor \(D\)** lo elevan.  
+- **Aerodinámica:** con \(C_D=0.75\) y \(A\approx 5.81\times 10^{-3}\ \mathrm{m}^2\), el arrastre reduce el apogeo; **menor \(C_D\)** o **menor \(D\)** lo elevan.  
 - **Propulsión:** mayor \(u_e\) o \(\dot m\) (a igual masa total) incrementan la velocidad al burnout y el apogeo.  
-- **Estructura:** reducir \(m_{\text{seca}}\) mejora \(T/W\) y desempeño global.
+- **Estructura:** reducir \(m_{\mathrm{seca}}\) mejora \(T/W\) y desempeño global.
 
 ---
 
