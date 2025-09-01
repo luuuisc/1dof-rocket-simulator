@@ -52,7 +52,7 @@ This repository provides:
 
 ## 🧮 Model & Equations
 
-The simulator is governed by the following differential equations:
+The simulator is governed by the following differential equations.
 
 **Altitude**
 $$
@@ -61,19 +61,20 @@ $$
 
 **Velocity**
 $$
-\dot{V} = -\,g \;-\; \frac{1}{2}\frac{\rho\,V\,|V|\,C_D\,A}{m}
-\;+\; \frac{V}{|V|}\,\frac{\dot{m}_{\mathrm{fuel}}\,u_e}{m}
+\dot{V} = -g - \frac{1}{2}\frac{\rho\,V\,|V|\,C_D\,A}{m}
++ \frac{V}{|V|}\frac{\dot{m}_{\mathrm{fuel}}\,u_e}{m}
 $$
 
 **Mass**
 $$
-\dot{m} = -\,\dot{m}_{\mathrm{fuel}}
+\dot{m} = -\dot{m}_{\mathrm{fuel}}
 $$
 
-Integration method: **Forward Euler**
+**Integration method: Forward Euler**
 $$
 y_{i+1} = y_i + \dot{y}_i\,\Delta t
 $$
+
 
 
 ---
