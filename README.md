@@ -1,5 +1,12 @@
 # 🚀 1-DoF Rocket Trajectory Simulator
 
+[APP](../1_DoF/docs/images/app.png)
+
+> [!IMPORTANT]
+> If you want to read the documentation in Spanish
+> - [README_ESP](README_ES.md)
+> - [APP_ESP](APP_ES.md)
+
 > **Goal:** Implement a **One Degree of Freedom (1-DoF) Rocket Simulator** that models the vertical trajectory of a rocket, applying key concepts from **Propulsion, Aero-Structures, and Avionics**.  
 > This project is based on the MIT lecture notes on rocket trajectories and adapted for **Python** implementation.
 
@@ -31,6 +38,17 @@ This repository provides:
 - Clear plots for performance evaluation.  
 
 ---
+
+> [!IMPORTANT]
+> ### Important — Use the Streamlit App and Its README
+
+To **run and evaluate the simulator** as required by the assignment, we recommend using the **Streamlit web interface** and following its **dedicated README**. There you’ll find:
+- Pre-filled **assignment defaults** and how to **load them automatically**.
+- The exact **mass-flow CSV format** (`time_s,mdot_kg_s`) with examples.
+- A UI map, color options, and where results are written (**plots/** and **metrics.json**).
+- Guidance for **numerical verification** (time-step refinement).
+
+**Read first:** [App README](APP.md)
 
 ## 📂 Repository Structure
 
@@ -103,7 +121,7 @@ Additionally, the report includes:
 
 ### 1. Clone the repo
 ```bash
-git clone https://github.com/yourusername/1dof-rocket-simulator.git
+git clone https://github.com/luuuisc/1dof-rocket-simulator 
 cd 1dof-rocket-simulator
 ```
 
