@@ -123,15 +123,31 @@ Finalmente, haz clic en **“Run simulation”**.
 
 ## 🧭 Mapa de la interfaz
 
-**Vista de la barra lateral**
+<!-- Sidebar overview -->
+<p><strong>Vista de barra lateral</strong></p>
+<p align="center">
+  <img src="docs/images/sidebar.png" alt="UI Sidebar" width="800"><br>
+  <em>Panel lateral con controles para configurar la simulación.</em>
+</p>
 
-![UI Sidebar](../1_DoF/docs/images/sidebar.png)
+<!-- Running a simulation -->
+<p><strong>Ejecución de la simulación</strong></p>
 
-**Ejecución de una simulación**
+<p align="center">
+  <img src="docs/images/result.png" alt="Run Results - Metrics" width="900"><br>
+  <em>Resultados y métricas generadas tras ejecutar la simulación.</em>
+</p>
 
-![Run Results](../1_DoF/docs/images/result.png)
-![Run Results](../1_DoF/docs/images/plot1.png)
-![Run Results](../1_DoF/docs/images/plot2.png)
+<p align="center">
+  <img src="docs/images/plot1.png" alt="Run Results - Plot 1" width="900"><br>
+  <em>Curvas principales de la simulación (ejemplo 1).</em>
+</p>
+
+<p align="center">
+  <img src="docs/images/plot2.png" alt="Run Results - Plot 2" width="900"><br>
+  <em>Curvas principales de la simulación (ejemplo 2).</em>
+</p>
+
 
 ---
 

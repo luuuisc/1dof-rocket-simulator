@@ -123,15 +123,31 @@ Finally, click **“Run simulation”**.
 
 ## 🧭 Interface Map
 
-**Sidebar overview**
+<!-- Sidebar overview -->
+<p><strong>Sidebar overview</strong></p>
+<p align="center">
+  <img src="docs/images/sidebar.png" alt="UI Sidebar" width="800"><br>
+  <em>Left panel with all controls to configure the simulation (time step, environment, geometry, masses, and motor curve).</em>
+</p>
 
-![UI Sidebar](../1_DoF/docs/images/sidebar.png)
+<!-- Running a simulation -->
+<p><strong>Running a simulation</strong></p>
 
-**Running a simulation**
+<p align="center">
+  <img src="docs/images/result.png" alt="Run Results - Metrics" width="900"><br>
+  <em>Summary of computed metrics (MECO, apogee, touchdown, maxima) after running the simulation.</em>
+</p>
 
-![Run Results](../1_DoF/docs/images/result.png)
-![Run Results](../1_DoF/docs/images/plot1.png)
-![Run Results](../1_DoF/docs/images/plot2.png)
+<p align="center">
+  <img src="docs/images/plot1.png" alt="Run Results - Plot 1" width="900"><br>
+  <em>Key time histories (e.g., altitude, velocity, acceleration) produced by the solver.</em>
+</p>
+
+<p align="center">
+  <img src="docs/images/plot2.png" alt="Run Results - Plot 2" width="900"><br>
+  <em>Forces over time (thrust, drag, weight) and total mass evolution.</em>
+</p>
+
 
 ---
 
