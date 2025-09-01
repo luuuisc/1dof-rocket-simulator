@@ -1,6 +1,6 @@
 # 🚀 1-DoF Rocket Trajectory Simulator
 
-![APP](../1_DoF/docs/images/app.png)
+![APP](../docs/images/app.png)
 
 > [!IMPORTANT]
 > If you want to read the documentation in Spanish
