@@ -22,7 +22,7 @@ The 1-DoF simulator is a core design tool to estimate a rocket’s performance p
 ---
 
 ## 2. Physical–Mathematical Model
-**State variables:** altitude $h(t)$, velocity $V(t)$, mass $m(t)$.  
+**State variables:** altitude \(h(t)\), velocity \(V(t)\), mass \(m(t)\).  
 **Forces:** gravity, aerodynamic drag, and thrust.
 
 ### 2.1 Governing ODEs (MIT formulation)
@@ -33,14 +33,14 @@ $$
 
 $$
 \dot{V} = -g - \frac{1}{2}\frac{\rho\,V\,|V|\,C_D\,A}{m}
-+ \frac{V}{|V|}\,\frac{\dot{m}_{\mathrm{fuel}}\,u_e}{m}
++ \frac{V}{|V|}\frac{\dot{m}_{\mathrm{fuel}}\,u_e}{m}
 $$
 
 $$
 \dot{m} = -\dot{m}_{\mathrm{fuel}}
 $$
 
-This compact sign-consistent form (using $V|V|$ and $V/|V|$) is equivalent to the piecewise force expression for ascent/descent and is standard in the academic 1-DoF model.
+This compact sign-consistent form (using \(V|V|\) and \(V/|V|\)) is equivalent to the piecewise force expression for ascent/descent and is standard in the academic 1-DoF model.
 
 ### 2.2 Force definitions
 
@@ -60,23 +60,23 @@ $$
 a = \dot{V} = \frac{F}{m}
 $$
 
-**Activity-specific motor data:** the exhaust velocity is $u_e=960\ \mathrm{m/s}$; the mass-flow curve $\dot{m}_{\mathrm{fuel}}(t)$ is provided by the assignment and should be **linearly interpolated** for time stepping.
+**Activity-specific motor data:** the exhaust velocity is \(u_e=960\ \mathrm{m/s}\); the mass-flow curve \(\dot{m}_{\mathrm{fuel}}(t)\) is provided by the assignment and should be **linearly interpolated** for time stepping.
 
 $$
 T(t) = \dot{m}_{\mathrm{fuel}}(t)\,u_e
 $$
 
-Given discrete samples $\{(t_k,\dot m_k)\}_{k=0}^{N}$, use piecewise-linear interpolation:
+Given discrete samples \(\{(t_k,\dot m_k)\}_{k=0}^{N}\), use piecewise-linear interpolation:
 
 $$
 \dot m_{\mathrm{fuel}}(t)=
 \begin{cases}
-\dot m_k + \dfrac{\dot m_{k+1}-\dot m_k}{\,t_{k+1}-t_k\,}\,(t-t_k), & t_k \le t \le t_{k+1},\\[8pt]
+\dot m_k + \dfrac{\dot m_{k+1}-\dot m_k}{t_{k+1}-t_k}\,(t-t_k), & t_k \le t \le t_{k+1},\\
 0, & \text{otherwise.}
 \end{cases}
 $$
 
-In discrete time $t_i$ (for coding and plots):
+In discrete time \(t_i\) (for coding and plots):
 
 $$
 T_i = \dot m_{\mathrm{fuel},i}\,u_e
@@ -101,6 +101,7 @@ F =
 -\,m g + D - T, & V<0.
 \end{cases}
 $$
+
 
 ---
 
