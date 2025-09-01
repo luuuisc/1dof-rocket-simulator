@@ -62,10 +62,9 @@ $$
 
 **Velocity**
 
-$$
-\dot{V} = -g - \frac{1}{2}\frac{\rho\,V\,|V|\,C_D\,A}{m}
-+ \frac{V}{|V|}\frac{\dot{m}_{\mathrm{fuel}}\,u_e}{m}
-$$
+<p><img alt="\dot{V} = -g - \frac{1}{2}\frac{\rho V |V| C_D A}{m} + \frac{V}{|V|}\frac{\dot{m}_{\mathrm{fuel}} u_e}{m}"
+src="https://render.githubusercontent.com/render/math?math=\dot{V}=-g-\frac{1}{2}\frac{\rho\,V\,|V|\,C_D\,A}{m}+\frac{V}{|V|}\frac{\dot{m}_{\mathrm{fuel}}\,u_e}{m}"></p>
+
 
 **Mass**
 
