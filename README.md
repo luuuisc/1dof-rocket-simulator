@@ -60,9 +60,8 @@ To **run and evaluate the simulator** as required by the assignment, we recommen
 ├── src/
 │   └── simulator.py      # Python implementation of the 1DoF model
 ├── docs/
-│   ├── theory.md         # Theoretical notes on rocket trajectory
-│   ├── report.md         # Technical report template
-│   └── references.md     # Key references (MIT notes, textbooks, papers)
+│   ├── theory.md         # Theoretical notes on rocket
+    ├── more docs with .md         # Notes on rocket trajectory
 ├── plots/                # Output graphs from simulations
 ├── app.py                # Streamlit app
 ├── requirements.txt      # Dependencies

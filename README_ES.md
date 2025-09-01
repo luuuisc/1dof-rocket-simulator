@@ -60,8 +60,7 @@ Este repositorio proporciona:
 │   └── simulator.py      # Implementación en Python del modelo 1DoF
 ├── docs/
 │   ├── theory.md         # Notas teóricas sobre trayectoria de cohetes
-│   ├── report.md         # Plantilla de reporte técnico
-│   └── references.md     # Referencias clave (notas MIT, libros, artículos)
+    ├── more docs with .md # Notas teóricas
 ├── plots/                # Gráficas de salida de las simulaciones
 ├── app.py                # App de Streamlit
 ├── requirements.txt      # Dependencias
