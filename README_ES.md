@@ -50,7 +50,7 @@ Este repositorio proporciona:
 > - Un mapa de la interfaz, opciones de color y dónde se guardan los resultados (**plots/** y **metrics.json**).
 > - Guía para la **verificación numérica** (refinamiento de paso temporal).
 >
-> **Lee primero:** [App README](APP.md)
+> **Lee primero:** [App README](APP_ES.md)
 
 ## 📂 Estructura del repositorio
 
