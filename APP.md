@@ -139,12 +139,12 @@ Finally, click **“Run simulation”**.
 </p>
 
 <p align="center">
-  <img src="docs/images/plot1.png" alt="Run Results - Plot 1" width="900"><br>
+  <img src="docs/images/plot2.png" alt="Run Results - Plot 1" width="900"><br>
   <em>Key time histories (e.g., altitude, velocity, acceleration) produced by the solver.</em>
 </p>
 
 <p align="center">
-  <img src="docs/images/plot2.png" alt="Run Results - Plot 2" width="900"><br>
+  <img src="docs/images/plot1.png" alt="Run Results - Plot 2" width="900"><br>
   <em>Forces over time (thrust, drag, weight) and total mass evolution.</em>
 </p>
 
