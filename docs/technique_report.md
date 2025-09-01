@@ -192,11 +192,14 @@ Reduce $\Delta t$ until $E_{\mathrm{rel}}(y)$ is below your tolerance (e.g., $<1
 ---
 
 ## 4. Inputs and Initial Conditions
-- **Environment:** $g=9.81\ \mathrm{m/s^2}$; $\rho=1.225\ \mathrm{kg/m^3}$ (sea-level baseline).  
-- **Vehicle:** $m_{\mathrm{dry}}=$ `<value>` kg; $m_{\mathrm{prop}}=$ `<value>` kg; $C_D=$ `<value>`; $A=$ `<value>` m$^2$.  
-- **Motor:** $u_e=960\ \mathrm{m/s}$; $\dot m_{\mathrm{fuel}}(t)$ from the supplied curve (interpolated).  
-- **Initial Conditions:** $h_0=0\ \mathrm{m}$, $V_0=0\ \mathrm{m/s}$, $m_0=m_{\mathrm{dry}}+m_{\mathrm{prop}}$.  
-- **Numerics:** $\Delta t=$ `<value>` s; $t_{\max}=$ `<value>` s.
+- **Environment:** $g = 9.78\ \mathrm{m/s^2}$; $\rho = 1.0\ \mathrm{kg/m^3}$ (enunciado 1-DoF).  
+- **Vehicle:** $m_{\mathrm{dry}} = 2.2\ \mathrm{kg}$; $m_{\mathrm{prop}} = 0.625\ \mathrm{kg}$; $C_D = 0.75$;  
+  diámetro $D = 0.086\ \mathrm{m}$ $(8.6\ \mathrm{cm})$ ⇒ área $A = \pi(D/2)^2 \approx 5.81\times 10^{-3}\ \mathrm{m}^2$.  
+- **Motor:** $u_e = 960\ \mathrm{m/s}$; $\dot m_{\mathrm{fuel}}(t)$ de la curva del enunciado (interpolada linealmente).  
+- **Initial Conditions:** $h_0 = 0\ \mathrm{m}$, $V_0 = 0\ \mathrm{m/s}$, $m_0 = m_{\mathrm{dry}} + m_{\mathrm{prop}} = 2.825\ \mathrm{kg}$.  
+- **Numerics:** $\Delta t = 0.01\ \mathrm{s}$ (baseline; verificar con $\Delta t/2$); $t_{\max} = 60\ \mathrm{s}$ o hasta **touchdown** (evento).
+
+
 
 ---
 
