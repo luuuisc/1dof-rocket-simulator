@@ -115,8 +115,7 @@ $$
 
 $$
 V_{i+1} = V_i +
-\left(-g - \frac{1}{2}\frac{\rho\,V_i\,|V_i|\,C_D\,A}{m_i}
-+ \frac{V_i}{|V_i|}\frac{\dot{m}_{\mathrm{fuel},i}\,u_e}{m_i}\right)\Delta t
+\left(-g - \frac{1}{2}\frac{\rho\,V_i\,|V_i|\,C_D\,A}{m_i} + \frac{V_i}{|V_i|}\frac{\dot{m}_{\mathrm{fuel},i}\,u_e}{m_i}\right)\,\Delta t
 $$
 
 $$
@@ -127,61 +126,66 @@ $$
 t_{i+1} = t_i + \Delta t
 $$
 
+
 ### Events and termination (with robust interpolation)
 
-- **MECO:** stop thrust when fuel mass reaches the dry mass (or when $\dot m_{\mathrm{fuel}}=0$).
+**MECO — end of burn.**  
+Stop thrust when fuel mass reaches the dry mass (or when $\dot m_{\mathrm{fuel}}=0$).  
+If $m_i>m_{\mathrm{dry}}$ and $m_{i+1}\le m_{\mathrm{dry}}$, define
 
-  Detection by **mass crossing**:
+$$
+\theta_{\mathrm{MECO}}=\frac{m_i-m_{\mathrm{dry}}}{m_i-m_{i+1}},\qquad
+t_{\mathrm{MECO}}=t_i+\theta_{\mathrm{MECO}}\,\Delta t
+$$
 
-  $$
-  \text{If } m_i > m_{\mathrm{dry}} \text{ and } m_{i+1}\le m_{\mathrm{dry}},\quad
-  \theta_{\mathrm{MECO}}=\frac{m_i-m_{\mathrm{dry}}}{\,m_i-m_{i+1}\,},\quad
-  t_{\mathrm{MECO}}=t_i+\theta_{\mathrm{MECO}}\Delta t
-  $$
+Record (linear-in-time interpolation)
 
-  Record (linear-in-time interpolation):
+$$
+h_{\mathrm{MECO}}\approx h_i+\theta_{\mathrm{MECO}}(h_{i+1}-h_i),\qquad
+V_{\mathrm{MECO}}\approx V_i+\theta_{\mathrm{MECO}}(V_{i+1}-V_i)
+$$
 
-  $$
-  h_{\mathrm{MECO}}\approx h_i+\theta_{\mathrm{MECO}}(h_{i+1}-h_i),\qquad
-  V_{\mathrm{MECO}}\approx V_i+\theta_{\mathrm{MECO}}(V_{i+1}-V_i)
-  $$
 
-- **Apogee:** first **zero crossing of velocity** after ascent.
+**Apogee — first zero crossing of $V$ after ascent.**  
+If $V_i>0$ and $V_{i+1}\le 0$, set
 
-  $$
-  \text{If } V_i>0 \text{ and } V_{i+1}\le 0,\quad
-  \theta_{\mathrm{apo}}=\frac{V_i}{\,V_i-V_{i+1}\,},\quad
-  t_{\mathrm{apo}}=t_i+\theta_{\mathrm{apo}}\Delta t
-  $$
+$$
+\theta_{\mathrm{apo}}=\frac{V_i}{\,V_i-V_{i+1}\,},\qquad
+t_{\mathrm{apo}}=t_i+\theta_{\mathrm{apo}}\,\Delta t
+$$
 
-  Height at apogee (two practical approximations):
+Height at apogee (two practical approximations)
 
-  $$
-  h_{\mathrm{apo}}\approx h_i+\theta_{\mathrm{apo}}(h_{i+1}-h_i)
-  $$
+$$
+h_{\mathrm{apo}}\approx h_i+\theta_{\mathrm{apo}}(h_{i+1}-h_i)
+$$
 
-  $$
-  h_{\mathrm{apo}}\approx h_i+\frac{1}{2}\,(V_i+0)\,\theta_{\mathrm{apo}}\Delta t
-  $$
+$$
+h_{\mathrm{apo}}\approx h_i+\frac{1}{2}\,(V_i+0)\,\theta_{\mathrm{apo}}\,\Delta t
+$$
 
-- **Touchdown:** **root of altitude** on descent.
 
-  $$
-  \text{If } h_i>0 \text{ and } h_{i+1}\le 0,\quad
-  \theta_{\mathrm{td}}=\frac{h_i}{\,h_i-h_{i+1}\,},\quad
-  t_{\mathrm{td}}=t_i+\theta_{\mathrm{td}}\Delta t
-  $$
+**Touchdown — root of altitude on descent.**  
+If $h_i>0$ and $h_{i+1}\le 0$, then
 
-- **Verification (time-step refinement):** repeat with $\Delta t/2$ and compare key traces. Define a relative discrepancy for a signal $y(t)$ (e.g., $h, V$):
+$$
+\theta_{\mathrm{td}}=\frac{h_i}{\,h_i-h_{i+1}\,},\qquad
+t_{\mathrm{td}}=t_i+\theta_{\mathrm{td}}\,\Delta t
+$$
 
-  $$
-  E_{\mathrm{rel}}(y)=
-  \frac{\max_t\left|\,y_{\Delta t}(t)-y_{\Delta t/2}(t)\,\right|}
-       {\max_t\left|\,y_{\Delta t/2}(t)\,\right|+\varepsilon},
-  \qquad \varepsilon\sim 10^{-9}
-  $$
 
-  Reduce $\Delta t$ until $E_{\mathrm{rel}}(y)$ is below your tolerance (e.g., $<1\%$).
+**Verification (time-step refinement).**  
+Repeat with $\Delta t/2$ and compare key traces. Define
+
+$$
+E_{\mathrm{rel}}(y)=
+\frac{\max_t\bigl|\,y_{\Delta t}(t)-y_{\Delta t/2}(t)\,\bigr|}
+     {\max_t\bigl|\,y_{\Delta t/2}(t)\,\bigr|+\varepsilon},
+\qquad \varepsilon\sim 10^{-9}
+$$
+
+Reduce $\Delta t$ until $E_{\mathrm{rel}}(y)$ is below your tolerance (e.g., $<1\%$).
+
 
 ---
 
