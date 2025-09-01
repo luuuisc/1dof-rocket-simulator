@@ -1,5 +1,14 @@
 # 🚀 Simulador de Trayectoria de Cohete 1-DoF
 
+<p align="center">
+  <img src="docs/images/app.png" alt="App UI" width="720">
+</p>
+
+> [!IMPORTANT]
+> Si quieres leer documentación en inglés
+> - [README](README.md)
+> - [APP](APP.md)
+
 > **Objetivo:** Implementar un **Simulador de Cohete de Un Grado de Libertad (1-DoF)** que modele la trayectoria vertical de un cohete, aplicando conceptos clave de **Propulsión, Aeroestructuras y Aviónica**.  
 > Este proyecto se basa en las notas del MIT sobre trayectorias de cohetes y está adaptado para implementación en **Python**.
 
@@ -33,7 +42,7 @@ Este repositorio proporciona:
 ---
 
 > [!IMPORTANT]
-> ### Importante — Usa la App de Streamlit y su README
+> ### Usa la App de Streamlit y su README
 >
 > Para **ejecutar y evaluar el simulador** conforme al enunciado, se recomienda usar la **interfaz web en Streamlit** y seguir su **README dedicado**. Ahí encontrarás:
 > - **Valores por defecto** del enunciado y cómo **cargarlos automáticamente**.

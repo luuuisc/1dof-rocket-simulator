@@ -1,6 +1,9 @@
 # 🚀 1-DoF Rocket Trajectory Simulator
 
-![APP](../docs/images/app.png)
+<p align="center">
+  <img src="docs/images/app.png" alt="App UI" width="720">
+</p>
+
 
 > [!IMPORTANT]
 > If you want to read the documentation in Spanish
@@ -40,7 +43,7 @@ This repository provides:
 ---
 
 > [!IMPORTANT]
-> ### Important — Use the Streamlit App and Its README
+> ### Use the Streamlit App and Its README
 
 To **run and evaluate the simulator** as required by the assignment, we recommend using the **Streamlit web interface** and following its **dedicated README**. There you’ll find:
 - Pre-filled **assignment defaults** and how to **load them automatically**.
