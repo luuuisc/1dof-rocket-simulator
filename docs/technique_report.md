@@ -32,13 +32,13 @@ $$
 $$
 
 $$
-\dot{V} = -g - \frac{1}{2}\frac{\rho\,V\,|V|\,C_D\,A}{m}
-+ \frac{V}{|V|}\frac{\dot{m}_{\mathrm{fuel}}\,u_e}{m}
+\dot{V} = -g - \frac{1}{2}\frac{\rho\,V\,|V|\,C_D\,A}{m} + \frac{V}{|V|}\frac{\dot{m}_{\mathrm{fuel}}\,u_e}{m}
 $$
 
 $$
 \dot{m} = -\dot{m}_{\mathrm{fuel}}
 $$
+
 
 This compact sign-consistent form (using \(V|V|\) and \(V/|V|\)) is equivalent to the piecewise force expression for ascent/descent and is standard in the academic 1-DoF model.
 
