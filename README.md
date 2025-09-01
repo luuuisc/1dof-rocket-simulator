@@ -56,23 +56,29 @@ The simulator is governed by the following differential equations.
 
 **Altitude**
 
-<p><img alt="\dot{h}=V"
-src="https://render.githubusercontent.com/render/math?math=%5Cdot%7Bh%7D%3DV"></p>
+$$
+\dot{h} = V
+$$
 
 **Velocity**
 
-<p><img alt="\dot{V} = -g - (1/2)(\rho V |V| C_D A)/m + (V/|V|)(\dot{m}_{fuel} u_e)/m"
-src="https://render.githubusercontent.com/render/math?math=%5Cdot%7BV%7D%3D-g-%5Cfrac%7B1%7D%7B2%7D%5Cfrac%7B%5Crho%20V%20%7CV%7C%20C%5FD%20A%7D%7Bm%7D%2B%5Cfrac%7BV%7D%7B%7CV%7C%7D%5Cfrac%7B%5Cdot%7Bm%7D_%7B%5Cmathrm%7Bfuel%7D%7D%20u%5Fe%7D%7Bm%7D"></p>
+$$
+\dot{V} = -g - \frac{1}{2}\frac{\rho\,V\,|V|\,C_D\,A}{m}
++ \frac{V}{|V|}\frac{\dot{m}_{\mathrm{fuel}}\,u_e}{m}
+$$
 
 **Mass**
 
-<p><img alt="\dot{m}=-\dot{m}_{fuel}"
-src="https://render.githubusercontent.com/render/math?math=%5Cdot%7Bm%7D%3D-%5Cdot%7Bm%7D_%7B%5Cmathrm%7Bfuel%7D%7D"></p>
+$$
+\dot{m} = -\dot{m}_{\mathrm{fuel}}
+$$
 
 **Integration method: Forward Euler**
 
-<p><img alt="y_{i+1}=y_i+\dot{y}_i\Delta t"
-src="https://render.githubusercontent.com/render/math?math=y_%7Bi%2B1%7D%3Dy_i%2B%5Cdot%7By%7D_i%5CDelta%20t"></p>
+$$
+y_{i+1} = y_i + \dot{y}_i\,\Delta t
+$$
+
 
 
 ---
@@ -100,7 +106,7 @@ Additionally, the report includes:
 ```bash
 git clone https://github.com/yourusername/1dof-rocket-simulator.git
 cd 1dof-rocket-simulator
-````
+```
 
 ### 2. Install dependencies
 
