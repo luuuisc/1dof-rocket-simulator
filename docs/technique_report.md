@@ -60,13 +60,13 @@ $$
 a = \dot{V} = \frac{F}{m}
 $$
 
-**Activity-specific motor data:** the exhaust velocity is \(u_e=960\ \mathrm{m/s}\); the mass-flow curve \(\dot{m}_{\mathrm{fuel}}(t)\) is provided by the assignment and should be **linearly interpolated** for time stepping.
+**Activity-specific motor data:** the exhaust velocity is $u_e = 960\,\mathrm{m/s}$; the mass-flow curve $\dot m_{\mathrm{fuel}}(t)$ is provided by the assignment and should be **linearly interpolated** for time stepping.
 
 $$
-T(t) = \dot{m}_{\mathrm{fuel}}(t)\,u_e
+T(t) = \dot m_{\mathrm{fuel}}(t)\,u_e
 $$
 
-Given discrete samples \(\{(t_k,\dot m_k)\}_{k=0}^{N}\), use piecewise-linear interpolation:
+Given discrete samples $\{(t_k,\dot m_k)\}_{k=0}^{N}$, use piecewise-linear interpolation:
 
 $$
 \dot m_{\mathrm{fuel}}(t)=
@@ -75,6 +75,7 @@ $$
 0, & \text{otherwise.}
 \end{cases}
 $$
+
 
 In discrete time \(t_i\) (for coding and plots):
 
